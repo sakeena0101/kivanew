@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stone, Quartz, Porcelain & Tile Collections | Kiva Stone & Tile</title>
+  <meta name="description" content="Explore materials from the Kiva slab inventory portal alongside our brand and tile collections.">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f4f1e9;
+      --cream-light: #faf9f5;
+      --ink: #242722;
+      --green: #26372e;
+      --muted: #77786f;
+      --line: #d9d6cd;
+      --line-subtle: #e6e3da;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 13.5px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+
+    /* TOP ANNOUNCEMENT BAR */
+    .top-bar {
+      background: var(--green);
+      color: #e5e8e1;
+      font-size: 10.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 8px 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .top-bar a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
+    .site-header {
+      height: 84px;
+      padding: 0 4.5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(40, 40, 30, 0.1);
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1;
+    }
+
+    .logo-crest {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      margin-bottom: 2px;
+      color: var(--ink);
+    }
+
+    .logo-title {
+      font-family: 'Cinzel', 'Playfair Display', serif;
+      font-size: 26px;
+      letter-spacing: 0.22em;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .logo-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 7.5px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 3px;
+      font-weight: 500;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+    }
+
+    .main-nav b {
+      font-size: 9px;
+      color: #888;
+      margin-left: 2px;
+      font-weight: normal;
+    }
+
+    .drop {
+      position: relative;
+      padding: 26px 0;
+    }
+
+    .drop-menu {
+      display: none;
+      position: absolute;
+      top: 76px;
+      left: -16px;
+      min-width: 230px;
+      background: var(--cream-light);
+      padding: 12px 18px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--line);
+      z-index: 101;
+    }
+
+    .drop-menu a {
+      display: block;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      font-size: 12px;
+      color: var(--ink);
+    }
+
+    .drop-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .drop:hover .drop-menu,
+    .drop:focus-within .drop-menu {
+      display: block;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--ink);
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .fav-count {
+      font-size: 10px;
+      vertical-align: super;
+    }
+
+    .visit-btn {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 3px;
+      margin-left: 4px;
+      white-space: nowrap;
+    }
+
+    .menu-label {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    /* HERO */
+    .page-hero {
+      padding: 55px 7% 40px;
+    }
+
+    .breadcrumb {
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-bottom: 36px;
+      display: block;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .hero-eyebrow {
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+      display: block;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.05;
+      font-weight: 400;
+      margin-bottom: 22px;
+    }
+
+    .hero-desc {
+      max-width: 540px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    /* SEARCH & FILTER SECTION */
+    .search-filter-section {
+      padding: 30px 7% 50px;
+      border-bottom: 1px solid var(--line-subtle);
+    }
+
+    .search-label {
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+      display: block;
+      font-weight: 500;
+    }
+
+    .search-input-wrap {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+      max-width: 650px;
+      margin-bottom: 16px;
+    }
+
+    .search-input-wrap input {
+      width: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: var(--ink);
+      font-family: inherit;
+    }
+
+    .search-input-wrap input::placeholder {
+      color: var(--muted);
+    }
+
+    .search-caption {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .quick-jump-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line-subtle);
+      font-size: 12.5px;
+      font-weight: 500;
+    }
+
+    .quick-jump-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTION LAYOUT */
+    .collections-section {
+      padding: 70px 7%;
+    }
+
+    .section-eyebrow {
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: block;
+      font-weight: 500;
+    }
+
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 36px;
+    }
+
+    .section-header-row h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(34px, 4vw, 54px);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .section-header-row p {
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    /* GRID FOR STONE TILES (4 PER ROW) */
+    .stone-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-bottom: 24px;
+    }
+
+    .stone-card {
+      display: block;
+    }
+
+    .stone-card-img {
+      height: 290px;
+      background: #cfccc2;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .stone-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .stone-card:hover .stone-card-img img {
+      transform: scale(1.05);
+    }
+
+    .stone-card h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+
+    .stone-card p {
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    /* GRID FOR BRAND SHOWCASE (3 PER ROW) */
+    .brand-showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 40px;
+    }
+
+    .brand-showcase-card {
+      display: block;
+    }
+
+    .brand-showcase-img {
+      height: 310px;
+      background: #cfccc2;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .brand-showcase-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .brand-showcase-card:hover .brand-showcase-img img {
+      transform: scale(1.04);
+    }
+
+    .brand-showcase-card h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+
+    .brand-showcase-card p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* PUCCINI & DURATILE 2-COLUMN BRAND BOXES */
+    .brand-box-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+
+    .brand-logo-card {
+      display: block;
+    }
+
+    .brand-logo-card .logo-black-box {
+      background: #191b19;
+      height: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      padding: 30px;
+      margin-bottom: 16px;
+    }
+
+    .brand-logo-card h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+
+    .brand-logo-card p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .catalog-disclaimer {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line-subtle);
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--green);
+      color: #edebe4;
+      padding: 75px 6% 25px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1.1fr 1.1fr 1fr 1.4fr;
+      gap: 36px;
+      padding-bottom: 60px;
+    }
+
+    .footer .tagline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 26px;
+      line-height: 1.25;
+      margin: 20px 0 28px;
+      font-weight: 400;
+    }
+
+    .footer-eyebrow {
+      font-size: 9.5px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #b8bcb1;
+      margin-bottom: 14px;
+      display: block;
+      font-weight: 500;
+    }
+
+    .footer p:not(.footer-eyebrow) {
+      font-size: 11.5px;
+      line-height: 1.85;
+      color: #d8dbd2;
+    }
+
+    .footer a:not(.footer-text-link) {
+      display: block;
+      font-size: 11.5px;
+      margin: 9px 0;
+      color: #d8dbd2;
+    }
+
+    .footer-text-link {
+      display: inline-block;
+      border-bottom: 1px solid #ffffff;
+      color: #ffffff;
+      padding-bottom: 4px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .space {
+      margin-top: 26px !important;
+    }
+
+    .newsletter-form {
+      margin-top: 14px;
+      position: relative;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      padding-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .newsletter-form input {
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 12px;
+      width: 85%;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #aeb2a5;
+    }
+
+    .newsletter-form button {
+      background: none;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .newsletter-note {
+      font-size: 9.5px;
+      color: #9ea395;
+      margin-top: 8px;
+    }
+
+    .associations {
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 24px 0;
+    }
+
+    .associations > span {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      color: #b8bcb1;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .association-logos {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: #e5e8e1;
+    }
+
+    .association-logos b {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 24px;
+      font-size: 10px;
+      color: #aeb2a5;
+    }
+
+    .footer-bottom a {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .main-nav { display: none; }
+      .menu-label { display: block; }
+      .stone-grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .brand-showcase-grid { grid-template-columns: repeat(2, 1fr); }
+      .brand-box-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .page-hero { padding: 40px 6% 30px; }
+      .search-filter-section { padding: 25px 6% 40px; }
+      .collections-section { padding: 50px 6%; }
+      .stone-grid-4 { grid-template-columns: 1fr; }
+      .brand-showcase-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .association-logos { flex-wrap: wrap; }
+      .footer-bottom { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span>A WORLD OF EXTRAORDINARY SURFACES</span>
+    <span>•</span>
+    <a href="collections.html">Discover the Kiva collection ↗</a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="logo-container" href="index.html">
+      <span class="logo-crest">𓃑 𓃰 𓃑</span>
+      <span class="logo-title">KIVA</span>
+      <span class="logo-sub">STONE</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="collections.html" style="font-weight:600;">Collections <b>⌄</b></a>
+      <div class="drop">
+        <a href="inventory.html">Inventory <b>⌄</b></a>
+        <div class="drop-menu">
+          <a href="https://kivastone.stoneprofitsweb.com/" target="_blank" rel="noopener">Slab inventory ↗</a>
+          <a href="https://puccini.stoneprofitsweb.com/" target="_blank" rel="noopener">Tile inventory ↗</a>
+        </div>
+      </div>
+      <div class="drop">
+        <a href="brands.html">Brands <b>⌄</b></a>
+        <div class="drop-menu">
+          <a href="brands.html">All Brands</a>
+          <a href="https://puccinistone.com/" target="_blank" rel="noopener">Puccini ↗</a>
+          <a href="https://duratileus.com/" target="_blank" rel="noopener">Duratile ↗</a>
+          <a href="https://www.coverlambygrespania.com/" target="_blank" rel="noopener">Coverlam ↗</a>
+          <a href="https://www.levantequartz.com/" target="_blank" rel="noopener">Levante ↗</a>
+          <a href="https://www.kivastone.com/imperia/" target="_blank" rel="noopener">Imperia ↗</a>
+          <a href="#emerald-link">Emerald ↗</a>
+        </div>
+      </div>
+      <div class="drop">
+        <a href="customers.html">Customers <b>⌄</b></a>
+        <div class="drop-menu">
+          <a href="fabricators.html">Fabricators</a>
+          <a href="retailers.html">Kitchen & Bath Retailers</a>
+          <a href="builders.html">Builders</a>
+          <a href="designers.html">Designers</a>
+          <a href="architects.html">Architects</a>
+          <a href="contractors.html">Contractors</a>
+        </div>
+      </div>
+      <a href="specials.html">Specials</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="header-icons">
+        <button class="icon-btn" title="Search" onclick="document.getElementById('productSearchInput').focus()">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button class="icon-btn" title="Favorites" onclick="alert('Wishlist is empty')">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="fav-count">0</span>
+        </button>
+      </div>
+      <a class="visit-btn" href="showroom.html">Visit Our Showroom ↗</a>
+      <button class="menu-label" type="button" aria-label="Menu" onclick="toggleNav()">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <span class="breadcrumb"><a href="index.html">Home</a> / Collections</span>
+      <span class="hero-eyebrow">THE KIVA COLLECTIONS</span>
+      <h1 class="hero-title">Find your next surface.</h1>
+      <p class="hero-desc">Explore materials from the Kiva slab inventory portal alongside our brand and tile collections.</p>
+    </section>
+
+    <!-- SEARCH & QUICK FILTER -->
+    <section class="search-filter-section">
+      <span class="search-label">FIND A MATERIAL BY NAME</span>
+      <div class="search-input-wrap">
+        <input type="text" id="productSearchInput" placeholder="Search marble, Taj Mahal, Levante or a product name" onkeyup="filterCards()">
+      </div>
+      <p class="search-caption">Category images are representative; view individual products for their specific imagery.</p>
+
+      <div class="quick-jump-links">
+        <a href="#natural-stone">Natural Stone ↓</a>
+        <a href="#engineered-surfaces">Engineered Surfaces ↓</a>
+        <a href="#semiprecious">Semiprecious ↓</a>
+        <a href="#tiles">Tiles ↓</a>
+      </div>
+    </section>
+
+    <!-- 1. NATURAL STONE -->
+    <section id="natural-stone" class="collections-section">
+      <span class="section-eyebrow">KIVA SLAB PORTAL</span>
+      <div class="section-header-row">
+        <h2>Natural Stone</h2>
+        <p>Explore products by their material category.</p>
+      </div>
+
+      <!-- Row 1 -->
+      <div class="stone-grid-4">
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Marble">
+          </div>
+          <h3>Marble</h3>
+          <p>63 portal listings ↗</p>
+        </a>
+
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Quartzite">
+          </div>
+          <h3>Quartzite</h3>
+          <p>115 portal listings ↗</p>
+        </a>
+
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=600&q=80" alt="Granite">
+          </div>
+          <h3>Granite</h3>
+          <p>69 portal listings ↗</p>
+        </a>
+
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80" alt="Dolomite">
+          </div>
+          <h3>Dolomite</h3>
+          <p>19 portal listings ↗</p>
+        </a>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="stone-grid-4">
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Travertine">
+          </div>
+          <h3>Travertine</h3>
+          <p>3 portal listings ↗</p>
+        </a>
+
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80" alt="Onyx">
+          </div>
+          <h3>Onyx</h3>
+          <p>0 portal listings ↗</p>
+        </a>
+
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Limestone">
+          </div>
+          <h3>Limestone</h3>
+          <p>0 portal listings ↗</p>
+        </a>
+
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Soapstone">
+          </div>
+          <h3>Soapstone</h3>
+          <p>0 portal listings ↗</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 2. ENGINEERED SURFACES -->
+    <section id="engineered-surfaces" class="collections-section" style="padding-top:20px;">
+      <span class="section-eyebrow">KIVA SLAB PORTAL</span>
+      <div class="section-header-row">
+        <h2>Engineered Surfaces</h2>
+        <p>Explore products by their material category.</p>
+      </div>
+
+      <div class="stone-grid-4">
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Quartz">
+          </div>
+          <h3>Quartz</h3>
+          <p>57 portal listings ↗</p>
+        </a>
+
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=600&q=80" alt="Porcelain">
+          </div>
+          <h3>Porcelain</h3>
+          <p>59 portal listings ↗</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 3. BRAND COLLECTIONS -->
+    <section class="collections-section" style="padding-top:20px;">
+      <div class="section-header-row">
+        <h2>Explore our brand collections</h2>
+      </div>
+
+      <!-- 3 Interior Brand Photos -->
+      <div class="brand-showcase-grid">
+        <a class="brand-showcase-card" href="https://www.levantequartz.com/" target="_blank">
+          <div class="brand-showcase-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Levante Quartz">
+          </div>
+          <h3>Levante Quartz</h3>
+          <p>Explore Brand Collection ↗</p>
+        </a>
+
+        <a class="brand-showcase-card" href="https://www.kivastone.com/imperia/" target="_blank">
+          <div class="brand-showcase-img">
+            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Imperia Porcelain">
+          </div>
+          <h3>Imperia Porcelain</h3>
+          <p>Explore Brand Collection ↗</p>
+        </a>
+
+        <a class="brand-showcase-card" href="https://www.coverlambygrespania.com/" target="_blank">
+          <div class="brand-showcase-img">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Coverlam Porcelain">
+          </div>
+          <h3>Coverlam Porcelain</h3>
+          <p>Explore Brand Collection ↗</p>
+        </a>
+      </div>
+
+      <!-- Puccini & Duratile 2 Black Box Logo Cards -->
+      <div class="brand-box-grid">
+        <a class="brand-logo-card" href="https://puccinistone.com/" target="_blank">
+          <div class="logo-black-box">
+            <svg width="45" height="45" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="6" style="margin-bottom:12px;"><circle cx="50" cy="50" r="35" stroke-dasharray="8 6"/></svg>
+            <div style="font-family:'Cinzel', serif; font-size:22px; letter-spacing:0.25em;">PUCCINI</div>
+            <div style="font-size:8px; letter-spacing:0.3em; opacity:0.7; margin-top:4px;">NATURAL STONE</div>
+          </div>
+          <h3>Puccini</h3>
+          <p>Explore Brand Collection ↗</p>
+        </a>
+
+        <a class="brand-logo-card" href="https://duratileus.com/" target="_blank">
+          <div class="logo-black-box">
+            <svg width="45" height="45" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="8" style="margin-bottom:12px;"><rect x="25" y="25" width="50" height="50"/></svg>
+            <div style="font-family:'Cinzel', serif; font-size:22px; letter-spacing:0.22em;">DURATILE</div>
+            <div style="font-size:8px; letter-spacing:0.3em; opacity:0.7; margin-top:4px;">LUXURY FLOORING</div>
+          </div>
+          <h3>Duratile</h3>
+          <p>Explore Brand Collection ↗</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 4. SEMIPRECIOUS -->
+    <section id="semiprecious" class="collections-section" style="padding-top:10px;">
+      <span class="section-eyebrow">KIVA SLAB PORTAL</span>
+      <div class="section-header-row">
+        <h2>Semiprecious</h2>
+        <p>Explore products by their material category.</p>
+      </div>
+
+      <div class="stone-grid-4">
+        <a class="stone-card" href="https://kivastone.stoneprofitsweb.com/" target="_blank">
+          <div class="stone-card-img">
+            <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=600&q=80" alt="Semiprecious Slabs">
+          </div>
+          <h3>Semiprecious</h3>
+          <p>9 portal listings ↗</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. TILES -->
+    <section id="tiles" class="collections-section" style="padding-top:10px;">
+      <div class="section-header-row">
+        <h2>Tiles</h2>
+        <p>Explore tile categories and check available tile products in Puccini inventory.</p>
+      </div>
+
+      <div class="brand-showcase-grid">
+        <a class="brand-showcase-card" href="https://puccini.stoneprofitsweb.com/" target="_blank">
+          <div class="brand-showcase-img">
+            <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=800&q=80" alt="Natural Stone Tile">
+          </div>
+          <h3>Natural Stone Tile</h3>
+          <p>Explore Collection ↗</p>
+        </a>
+
+        <a class="brand-showcase-card" href="https://puccini.stoneprofitsweb.com/" target="_blank">
+          <div class="brand-showcase-img">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Porcelain Tile">
+          </div>
+          <h3>Porcelain Tile</h3>
+          <p>Explore Collection ↗</p>
+        </a>
+
+        <a class="brand-showcase-card" href="https://puccini.stoneprofitsweb.com/" target="_blank">
+          <div class="brand-showcase-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Mosaics">
+          </div>
+          <h3>Mosaics</h3>
+          <p>Explore Collection ↗</p>
+        </a>
+      </div>
+
+      <p class="catalog-disclaimer">Imported from the Kiva slab portal. This collection is a catalog snapshot; open live inventory to confirm current bundles, quantities, and availability.</p>
+    </section>
+  </main>
+
+  <!-- GREEN FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="logo-container" style="margin-bottom:12px;">
+          <span class="logo-crest" style="color:#ffffff;">𓃑 𓃰 𓃑</span>
+          <span class="logo-title" style="color:#ffffff; font-size:24px;">KIVA</span>
+          <span class="logo-sub" style="color:#b8bcb1;">STONE</span>
+        </div>
+        <p class="tagline">Extraordinary surfaces.<br>Endless possibility.</p>
+        <span class="footer-eyebrow">LET'S CREATE SOMETHING EXCEPTIONAL</span>
+        <a class="footer-text-link" href="https://43ey6h.share-na2.hsforms.com/2MY3neRzUQuWjtEmpmne2hQ" target="_blank" rel="noopener">Start a conversation ↗</a>
+      </div>
+
+      <div>
+        <span class="footer-eyebrow">VISIT KIVA STONE & TILE</span>
+        <p>1135 W Trinity Mills Rd, #100<br>Carrollton, TX 75006</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=1135+W+Trinity+Mills+Rd+%23100+Carrollton+TX+75006" target="_blank">View on Google Maps ↗</a>
+        <span class="footer-eyebrow space">CALL OUR TEAM</span>
+        <a href="tel:+19728035002">(972) 803-5002</a>
+      </div>
+
+      <div>
+        <span class="footer-eyebrow">SHOWROOM HOURS</span>
+        <p>Monday–Friday: 8:30 AM–5:00 PM<br>Saturday: 9:00 AM–2:00 PM<br>Sunday: Closed</p>
+      </div>
+
+      <div>
+        <span class="footer-eyebrow">EXPLORE</span>
+        <a href="collections.html">Our collections</a>
+        <a href="brands.html">Our brands</a>
+        <a href="specials.html">Specials</a>
+        <a href="https://kivastone.stoneprofitsweb.com/" target="_blank" rel="noopener">Slab inventory ↗</a>
+        <a href="https://puccini.stoneprofitsweb.com/" target="_blank" rel="noopener">Tile inventory ↗</a>
+      </div>
+
+      <div>
+        <span class="footer-eyebrow">WORK WITH KIVA</span>
+        <a href="customers.html">Customers</a>
+        <a href="showroom.html">Visit the showroom</a>
+        <a href="https://43ey6h.share-na2.hsforms.com/2MY3neRzUQuWjtEmpmne2hQ" target="_blank" rel="noopener">Become a trade partner ↗</a>
+        <span class="footer-eyebrow space">THE NEXT GREAT FIND</span>
+        <p>New materials. Fresh inspiration. In your inbox.</p>
+        
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">↗</button>
+        </form>
+        <p class="newsletter-note">Sample signup. No subscription will be sent.</p>
+      </div>
+    </div>
+
+    <div class="associations">
+      <span>ASSOCIATIONS · INDUSTRY RESOURCES</span>
+      <div class="association-logos">
+        <b>ASID</b>
+        <b>NKBA</b>
+        <b>IIDA</b>
+        <b>NATURAL STONE INSTITUTE</b>
+        <b>NARI</b>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Kiva Stone & Tile</span>
+      <span>Website concept · Illustrative collection imagery · HubSpot not connected</span>
+      <a href="index.html">About this sample</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      const nav = document.querySelector('.main-nav');
+      if (nav.style.display === 'flex') {
+        nav.style.display = 'none';
+      } else {
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'column';
+        nav.style.position = 'absolute';
+        nav.style.top = '84px';
+        nav.style.left = '0';
+        nav.style.right = '0';
+        nav.style.background = '#f4f1e9';
+        nav.style.padding = '20px';
+        nav.style.borderBottom = '1px solid #d9d6cd';
+      }
+    }
+
+    // Live search filter
+    function filterCards() {
+      const query = document.getElementById('productSearchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.stone-card, .brand-showcase-card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

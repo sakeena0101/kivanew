@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Brands | Kiva Stone & Tile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #f4f1e9;
+      --cream-light: #faf9f5;
+      --ink: #242722;
+      --green: #26372e;
+      --muted: #77786f;
+      --line: #d9d6cd;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 13.5px; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; transition: opacity .2s; }
+    a:hover { opacity: .75; }
+
+    .top-bar { background: var(--green); color: #e5e8e1; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; padding: 8px 5%; display: flex; justify-content: center; gap: 16px; }
+    .top-bar a { color: #fff; }
+
+    .site-header { height: 84px; padding: 0 4.5%; display: flex; align-items: center; justify-content: space-between; background: var(--cream); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(40,40,30,.1); }
+    .logo-container { display: flex; flex-direction: column; line-height: 1; }
+    .logo-crest { font-size: 11px; letter-spacing: .2em; color: var(--ink); margin-bottom: 2px; }
+    .logo-title { font-family: 'Cinzel', serif; font-size: 26px; letter-spacing: .22em; font-weight: 600; }
+    .logo-sub { font-size: 7.5px; letter-spacing: .35em; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
+
+    .main-nav { display: flex; align-items: center; gap: 28px; font-size: 13px; }
+    .main-nav b { font-size: 9px; color: #888; }
+    .drop { position: relative; padding: 26px 0; }
+    .drop-menu { display: none; position: absolute; top: 76px; left: -16px; min-width: 230px; background: var(--cream-light); padding: 12px 18px; box-shadow: 0 16px 36px rgba(0,0,0,.08); border: 1px solid var(--line); z-index: 101; }
+    .drop-menu a { display: block; padding: 9px 0; border-bottom: 1px solid rgba(0,0,0,.06); font-size: 12px; }
+    .drop-menu a:last-child { border-bottom: none; }
+    .drop:hover .drop-menu { display: block; }
+
+    .header-right { display: flex; align-items: center; gap: 20px; }
+    .header-icons { display: flex; align-items: center; gap: 16px; }
+    .icon-btn { background: none; border: none; font-size: 16px; cursor: pointer; color: var(--ink); display: flex; align-items: center; gap: 4px; }
+    .visit-btn { font-size: 12px; border-bottom: 1px solid var(--ink); padding-bottom: 3px; margin-left: 4px; }
+
+    .page-hero { padding: 55px 7% 40px; background: #ece8dc; border-bottom: 1px solid var(--line); }
+    .breadcrumb { font-size: 11px; color: var(--muted); margin-bottom: 24px; display: block; }
+    .eyebrow { font-size: 9.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 12px; font-weight: 500; }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 5.5vw, 70px); line-height: 1.1; font-weight: 400; margin-bottom: 16px; }
+    .page-hero p { max-width: 580px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+
+    .section { padding: 75px 7%; }
+    .brands-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .brand-card { border: 1px solid var(--line); background: var(--cream); display: flex; flex-direction: column; }
+    .brand-logo-box { background: #191b19; height: 190px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #ffffff; padding: 24px; text-align: center; }
+    .brand-logo-text { font-family: 'Cinzel', serif; font-size: 20px; letter-spacing: 0.25em; }
+    .brand-logo-sub { font-size: 8px; letter-spacing: 0.3em; margin-top: 6px; opacity: 0.7; }
+    .brand-content { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+    .brand-tag { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; display: block; font-weight: 500; }
+    .brand-desc { font-size: 12.5px; color: var(--ink); line-height: 1.6; margin-bottom: 24px; }
+    .brand-link { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 14px; font-size: 11.5px; font-weight: 500; }
+
+    .footer { background: var(--green); color: #edebe4; padding: 75px 6% 25px; margin-top: 40px; }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1.1fr 1.1fr 1fr 1.4fr; gap: 36px; padding-bottom: 60px; }
+    .footer .tagline { font-family: 'Playfair Display', serif; font-size: 26px; margin: 20px 0 28px; font-weight: 400; }
+    .footer-eyebrow { font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: #b8bcb1; margin-bottom: 14px; display: block; }
+    .footer p:not(.footer-eyebrow) { font-size: 11.5px; line-height: 1.85; color: #d8dbd2; }
+    .footer a:not(.footer-text-link) { display: block; font-size: 11.5px; margin: 9px 0; color: #d8dbd2; }
+    .footer-text-link { display: inline-block; border-bottom: 1px solid #fff; color: #fff; padding-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+    .associations { border-top: 1px solid rgba(255,255,255,.14); border-bottom: 1px solid rgba(255,255,255,.14); padding: 24px 0; }
+    .association-logos { display: flex; justify-content: space-between; gap: 20px; color: #e5e8e1; margin-top: 16px; }
+    .association-logos b { font-size: 12px; letter-spacing: .12em; }
+    .footer-bottom { display: flex; justify-content: space-between; padding-top: 24px; font-size: 10px; color: #aeb2a5; }
+
+    @media (max-width: 960px) {
+      .main-nav { display: none; }
+      .brands-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .brands-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <span>A WORLD OF EXTRAORDINARY SURFACES</span><span>•</span><a href="collections.html">Discover the Kiva collection ↗</a>
+  </div>
+
+  <header class="site-header">
+    <a class="logo-container" href="index.html">
+      <span class="logo-crest">𓃑 𓃰 𓃑</span>
+      <span class="logo-title">KIVA</span>
+      <span class="logo-sub">STONE</span>
+    </a>
+    <nav class="main-nav">
+      <a href="collections.html">Collections <b>⌄</b></a>
+      <div class="drop">
+        <a href="inventory.html">Inventory <b>⌄</b></a>
+        <div class="drop-menu">
+          <a href="https://kivastone.stoneprofitsweb.com/" target="_blank">Slab inventory ↗</a>
+          <a href="https://puccini.stoneprofitsweb.com/" target="_blank">Tile inventory ↗</a>
+        </div>
+      </div>
+      <div class="drop">
+        <a href="brands.html" style="font-weight:600;">Brands <b>⌄</b></a>
+        <div class="drop-menu">
+          <a href="brands.html">All Brands</a>
+          <a href="https://puccinistone.com/" target="_blank">Puccini ↗</a>
+          <a href="https://duratileus.com/" target="_blank">Duratile ↗</a>
+          <a href="https://www.coverlambygrespania.com/" target="_blank">Coverlam ↗</a>
+          <a href="https://www.levantequartz.com/" target="_blank">Levante ↗</a>
+          <a href="https://www.kivastone.com/imperia/" target="_blank">Imperia ↗</a>
+          <a href="brands.html#emerald">Emerald ↗</a>
+        </div>
+      </div>
+      <div class="drop">
+        <a href="customers.html">Customers <b>⌄</b></a>
+        <div class="drop-menu">
+          <a href="customers.html#fabricators">Fabricators ↗</a>
+          <a href="customers.html#retailers">Kitchen & Bath Retailers ↗</a>
+          <a href="customers.html#builders">Builders ↗</a>
+          <a href="customers.html#designers">Designers ↗</a>
+          <a href="customers.html#architects">Architects ↗</a>
+          <a href="customers.html#contractors">Contractors ↗</a>
+        </div>
+      </div>
+      <a href="specials.html">Specials</a>
+    </nav>
+    <div class="header-right">
+      <div class="header-icons">
+        <button class="icon-btn" title="Search" onclick="alert('Search collection or brand...')">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button class="icon-btn" title="Favorites">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span style="font-size:10px;vertical-align:super;">0</span>
+        </button>
+      </div>
+      <a class="visit-btn" href="showroom.html">Visit Our Showroom ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <span class="breadcrumb"><a href="index.html">Home</a> / Brands</span>
+      <span class="eyebrow">THE KIVA BRAND COLLECTION</span>
+      <h1>Our Brands</h1>
+      <p>Distinctive materials and trusted partners across natural stone, porcelain, engineered quartz, and luxury flooring collections.</p>
+    </section>
+
+    <section class="section">
+      <div class="brands-grid">
+        <div class="brand-card">
+          <div class="brand-logo-box">
+            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="6" style="margin-bottom:10px;"><circle cx="50" cy="50" r="35" stroke-dasharray="8 6"/></svg>
+            <div class="brand-logo-text">PUCCINI</div>
+            <div class="brand-logo-sub">NATURAL STONE</div>
+          </div>
+          <div class="brand-content">
+            <div><span class="brand-tag">TILE COLLECTIONS</span><p class="brand-desc">Tile collections for considered interiors.</p></div>
+            <a class="brand-link" href="https://puccinistone.com/" target="_blank"><span>Explore Puccini</span><span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-logo-box">
+            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="8" style="margin-bottom:10px;"><rect x="25" y="25" width="50" height="50"/></svg>
+            <div class="brand-logo-text">DURATILE</div>
+            <div class="brand-logo-sub">LUXURY FLOORING</div>
+          </div>
+          <div class="brand-content">
+            <div><span class="brand-tag">FLOORING & TILE</span><p class="brand-desc">Flooring and tile collections for your next project.</p></div>
+            <a class="brand-link" href="https://duratileus.com/" target="_blank"><span>Explore Duratile</span><span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-logo-box">
+            <div class="brand-logo-text" style="font-size:24px; letter-spacing:0.18em;">COVERLAM</div>
+            <div class="brand-logo-sub">BY GRESPANIA</div>
+          </div>
+          <div class="brand-content">
+            <div><span class="brand-tag">PORCELAIN SURFACES</span><p class="brand-desc">Discover the possibilities of large-format porcelain.</p></div>
+            <a class="brand-link" href="https://www.coverlambygrespania.com/" target="_blank"><span>Explore Coverlam</span><span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-logo-box">
+            <div class="brand-logo-text">LEVANTE ®</div>
+            <div class="brand-logo-sub">LUXURY SURFACES</div>
+          </div>
+          <div class="brand-content">
+            <div><span class="brand-tag">QUARTZ COLLECTION</span><p class="brand-desc">Explore the Levante Quartz collection.</p></div>
+            <a class="brand-link" href="https://www.levantequartz.com/" target="_blank"><span>Explore Levante</span><span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-logo-box">
+            <div class="brand-logo-text">IMPERIA</div>
+            <div class="brand-logo-sub">LUXURY SURFACES</div>
+          </div>
+          <div class="brand-content">
+            <div><span class="brand-tag">PORCELAIN SLABS</span><p class="brand-desc">Explore the Imperia large-format porcelain collection.</p></div>
+            <a class="brand-link" href="https://www.kivastone.com/imperia/" target="_blank"><span>Explore Imperia</span><span>↗</span></a>
+          </div>
+        </div>
+
+        <div id="emerald" class="brand-card">
+          <div class="brand-logo-box">
+            <div class="brand-logo-text" style="font-size:22px; letter-spacing:0.3em;">EMERALD</div>
+            <div class="brand-logo-sub">COLLECTION</div>
+          </div>
+          <div class="brand-content">
+            <div><span class="brand-tag">SEMIPRECIOUS SURFACES</span><p class="brand-desc">Explore Emerald semiprecious surfaces for distinctive spaces.</p></div>
+            <a class="brand-link" href="#emerald"><span>Explore Emerald</span><span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="logo-container" style="margin-bottom:12px;"><span class="logo-title" style="color:#fff;font-size:24px;">KIVA</span><span class="logo-sub" style="color:#b8bcb1;">STONE</span></div>
+        <p class="tagline">Extraordinary surfaces.<br>Endless possibility.</p>
+        <span class="footer-eyebrow">LET'S CREATE SOMETHING EXCEPTIONAL</span>
+        <a class="footer-text-link" href="https://43ey6h.share-na2.hsforms.com/2MY3neRzUQuWjtEmpmne2hQ" target="_blank">Start a conversation ↗</a>
+      </div>
+      <div><span class="footer-eyebrow">VISIT KIVA STONE & TILE</span><p>1135 W Trinity Mills Rd, #100<br>Carrollton, TX 75006</p><p style="margin-top:14px;">(972) 803-5002</p></div>
+      <div><span class="footer-eyebrow">SHOWROOM HOURS</span><p>Monday–Friday: 8:30 AM–5:00 PM<br>Saturday: 9:00 AM–2:00 PM<br>Sunday: Closed</p></div>
+      <div><span class="footer-eyebrow">EXPLORE</span><a href="collections.html">Our collections</a><a href="brands.html">Our brands</a><a href="specials.html">Specials</a></div>
+      <div><span class="footer-eyebrow">WORK WITH KIVA</span><a href="customers.html">Customers</a><a href="showroom.html">Visit the showroom</a></div>
+    </div>
+    <div class="associations"><span>ASSOCIATIONS · INDUSTRY RESOURCES</span><div class="association-logos"><b>ASID</b><b>NKBA</b><b>IIDA</b><b>NATURAL STONE INSTITUTE</b><b>NARI</b></div></div>
+    <div class="footer-bottom"><span>© 2026 Kiva Stone & Tile</span><a href="index.html">About this sample</a></div>
+  </footer>
+</body>
+</html>

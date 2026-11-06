@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kitchen & Bath Retailers | Kiva Stone & Tile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --cream: #f4f1e9; --cream-light: #faf9f5; --ink: #242722; --green: #26372e; --muted: #77786f; --line: #d9d6cd; --line-subtle: #e6e3da; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 13.5px; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; transition: opacity .2s; }
+    a:hover { opacity: .75; }
+    .top-bar { background: var(--green); color: #e5e8e1; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; padding: 8px 5%; display: flex; justify-content: center; gap: 16px; }
+    .top-bar a { color: #fff; }
+    .site-header { height: 84px; padding: 0 4.5%; display: flex; align-items: center; justify-content: space-between; background: var(--cream); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(40,40,30,.1); }
+    .logo-container { display: flex; flex-direction: column; line-height: 1; }
+    .logo-crest { font-size: 11px; letter-spacing: .2em; color: var(--ink); margin-bottom: 2px; }
+    .logo-title { font-family: 'Cinzel', serif; font-size: 26px; letter-spacing: .22em; font-weight: 600; }
+    .logo-sub { font-size: 7.5px; letter-spacing: .35em; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
+    .main-nav { display: flex; align-items: center; gap: 28px; font-size: 13px; }
+    .drop { position: relative; padding: 26px 0; }
+    .drop-menu { display: none; position: absolute; top: 76px; left: -16px; min-width: 230px; background: var(--cream-light); padding: 12px 18px; box-shadow: 0 16px 36px rgba(0,0,0,.08); border: 1px solid var(--line); z-index: 101; }
+    .drop-menu a { display: block; padding: 9px 0; border-bottom: 1px solid rgba(0,0,0,.06); font-size: 12px; }
+    .drop-menu a:last-child { border-bottom: none; }
+    .drop:hover .drop-menu { display: block; }
+    .header-right { display: flex; align-items: center; gap: 20px; }
+    .visit-btn { font-size: 12px; border-bottom: 1px solid var(--ink); padding-bottom: 3px; margin-left: 4px; }
+    .page-hero { padding: 55px 7% 40px; }
+    .breadcrumb { font-size: 11px; color: var(--muted); margin-bottom: 30px; display: block; }
+    .eyebrow { font-size: 9.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 14px; font-weight: 500; }
+    .hero-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(42px, 6vw, 76px); line-height: 1.05; font-weight: 400; margin-bottom: 20px; }
+    .hero-desc { max-width: 580px; color: var(--muted); line-height: 1.8; font-size: 14px; }
+    .tabs-wrapper { padding: 0 7% 40px; }
+    .tabs-row { display: flex; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid var(--line-subtle); padding-bottom: 35px; }
+    .tab-btn { background: transparent; border: 1px solid var(--line); color: var(--ink); padding: 12px 22px; font-size: 12.5px; font-family: inherit; display: inline-block; }
+    .tab-btn.active { background: var(--green); color: #ffffff; border-color: var(--green); }
+    .customer-content-area { padding: 0 7% 80px; }
+    .partner-card { border-left: 2px solid var(--line); padding: 10px 0 10px 36px; max-width: 640px; }
+    .card-eyebrow { font-size: 9px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; display: block; font-weight: 600; }
+    .partner-card h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(34px, 4.5vw, 54px); font-weight: 400; margin-bottom: 16px; line-height: 1.15; }
+    .partner-card p { color: var(--muted); font-size: 13.5px; line-height: 1.8; margin-bottom: 24px; }
+    .partner-card ul { list-style: none; margin-bottom: 30px; }
+    .partner-card ul li { font-size: 13px; color: var(--ink); margin-bottom: 10px; position: relative; padding-left: 18px; }
+    .partner-card ul li::before { content: "•"; position: absolute; left: 0; color: var(--ink); font-size: 16px; line-height: 1; }
+    .card-cta { display: inline-flex; align-items: center; gap: 10px; background: #191b19; color: #ffffff; padding: 14px 28px; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; font-weight: 500; }
+    .card-cta:hover { background: var(--green); }
+    .footer { background: var(--green); color: #edebe4; padding: 75px 6% 25px; }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1.1fr 1.1fr 1fr 1.4fr; gap: 36px; padding-bottom: 60px; }
+    .footer .tagline { font-family: 'Playfair Display', serif; font-size: 26px; margin: 20px 0 28px; font-weight: 400; }
+    .footer-eyebrow { font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: #b8bcb1; margin-bottom: 14px; display: block; }
+    .footer p:not(.footer-eyebrow){ font-size: 11.5px; line-height: 1.85; color: #d8dbd2; }
+    .footer a:not(.footer-text-link){ display: block; font-size: 11.5px; margin: 9px 0; color: #d8dbd2; }
+    .footer-text-link { display: inline-block; border-bottom: 1px solid #fff; color: #fff; padding-bottom: 4px; font-size: 11px; text-transform: uppercase; }
+    .associations { border-top: 1px solid rgba(255,255,255,.14); border-bottom: 1px solid rgba(255,255,255,.14); padding: 24px 0; }
+    .association-logos { display: flex; justify-content: space-between; gap: 20px; color: #e5e8e1; margin-top: 16px; }
+    .association-logos b { font-size: 12px; letter-spacing: .12em; }
+    .footer-bottom { display: flex; justify-content: space-between; padding-top: 24px; font-size: 10px; color: #aeb2a5; }
+    @media (max-width: 960px) { .main-nav { display: none; } .footer-top { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .tabs-row { gap: 8px; } .tab-btn { padding: 10px 14px; font-size: 11.5px; } .partner-card { padding-left: 20px; } .footer-top { grid-template-columns: 1fr; } .association-logos { flex-wrap: wrap; } }
+  </style>
+</head>
+<body>
+  <div class="top-bar"><span>A WORLD OF EXTRAORDINARY SURFACES</span><span>•</span><a href="collections.html">Discover the Kiva collection ↗</a></div>
+  <header class="site-header">
+    <a class="logo-container" href="index.html">
+      <span class="logo-crest">𓃑 𓃰 𓃑</span>
+      <span class="logo-title">KIVA</span>
+      <span class="logo-sub">STONE</span>
+    </a>
+    <nav class="main-nav">
+      <a href="collections.html">Collections <b>⌄</b></a>
+      <div class="drop"><a href="inventory.html">Inventory <b>⌄</b></a>
+        <div class="drop-menu">
+          <a href="https://kivastone.stoneprofitsweb.com/" target="_blank">Slab inventory ↗</a>
+          <a href="https://puccini.stoneprofitsweb.com/" target="_blank">Tile inventory ↗</a>
+        </div>
+      </div>
+      <div class="drop"><a href="brands.html">Brands <b>⌄</b></a>
+        <div class="drop-menu"><a href="brands.html">All Brands</a></div>
+      </div>
+      <div class="drop"><a href="customers.html" style="font-weight:600;">Customers <b>⌄</b></a>
+        <div class="drop-menu">
+          <a href="fabricators.html">Fabricators ↗</a>
+          <a href="retailers.html">Kitchen & Bath Retailers ↗</a>
+          <a href="builders.html">Builders ↗</a>
+          <a href="designers.html">Designers ↗</a>
+          <a href="architects.html">Architects ↗</a>
+          <a href="contractors.html">Contractors ↗</a>
+        </div>
+      </div>
+      <a href="specials.html">Specials</a>
+    </nav>
+    <div class="header-right"><a class="visit-btn" href="showroom.html">Visit Our Showroom ↗</a></div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <span class="breadcrumb"><a href="index.html">Home</a> / <a href="customers.html">Customers</a></span>
+      <span class="eyebrow">CUSTOMERS</span>
+      <h1 class="hero-title">Kitchen & Bath Retailers</h1>
+      <p class="hero-desc">Your one-stop source for stone and tile, backed by an extensive sampling program and dedicated sales support.</p>
+    </section>
+    <div class="tabs-wrapper">
+      <div class="tabs-row">
+        <a class="tab-btn" href="fabricators.html">Fabricators</a>
+        <a class="tab-btn active" href="retailers.html">Kitchen & Bath Retailers</a>
+        <a class="tab-btn" href="builders.html">Builders</a>
+        <a class="tab-btn" href="designers.html">Designers</a>
+        <a class="tab-btn" href="architects.html">Architects</a>
+        <a class="tab-btn" href="contractors.html">Contractors</a>
+      </div>
+    </div>
+    <section class="customer-content-area">
+      <div class="partner-card">
+        <span class="card-eyebrow">PARTNER WITH KIVA</span>
+        <h2>Kitchen & Bath Retailers</h2>
+        <p>Your one-stop source for stone and tile, backed by an extensive sampling program and dedicated sales support.</p>
+        <ul>
+          <li>Custom showroom display towers and material sample kits</li>
+          <li>Dedicated wholesale rep assistance and co-op marketing</li>
+          <li>Reliable inventory reservations for client jobs</li>
+        </ul>
+        <a class="card-cta" href="https://43ey6h.share-na2.hsforms.com/2MY3neRzUQuWjtEmpmne2hQ" target="_blank">
+          <span>Request retailer support</span><span>↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="logo-container" style="margin-bottom:12px;"><span class="logo-title" style="color:#fff;font-size:24px;">KIVA</span><span class="logo-sub" style="color:#b8bcb1;">STONE</span></div>
+        <p class="tagline">Extraordinary surfaces.<br>Endless possibility.</p>
+        <a class="footer-text-link" href="https://43ey6h.share-na2.hsforms.com/2MY3neRzUQuWjtEmpmne2hQ" target="_blank">Start a conversation ↗</a>
+      </div>
+      <div><span class="footer-eyebrow">VISIT KIVA STONE & TILE</span><p>1135 W Trinity Mills Rd, #100<br>Carrollton, TX 75006</p><p style="margin-top:14px;">(972) 803-5002</p></div>
+      <div><span class="footer-eyebrow">SHOWROOM HOURS</span><p>Monday–Friday: 8:30 AM–5:00 PM<br>Saturday: 9:00 AM–2:00 PM<br>Sunday: Closed</p></div>
+      <div><span class="footer-eyebrow">EXPLORE</span><a href="collections.html">Our collections</a><a href="brands.html">Our brands</a><a href="specials.html">Specials</a></div>
+      <div><span class="footer-eyebrow">WORK WITH KIVA</span><a href="customers.html">Customers</a><a href="showroom.html">Visit the showroom</a></div>
+    </div>
+    <div class="associations"><span>ASSOCIATIONS · INDUSTRY RESOURCES</span><div class="association-logos"><b>ASID</b><b>NKBA</b><b>IIDA</b><b>NATURAL STONE INSTITUTE</b><b>NARI</b></div></div>
+    <div class="footer-bottom"><span>© 2026 Kiva Stone & Tile</span><a href="index.html">About this sample</a></div>
+  </footer>
+</body>
+</html>
